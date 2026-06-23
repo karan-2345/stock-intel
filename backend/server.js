@@ -11,7 +11,12 @@ const fearRoutes = require('./routes/fear');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors({ origin: 'http://localhost:3000' }));
+app.use(cors({
+  origin: [
+    'http://localhost:3000',
+    'https://stocksintel-sage.vercel.app'
+  ]
+}));
 app.use(express.json());
 
 // Routes
