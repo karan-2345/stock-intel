@@ -21,7 +21,7 @@ router.post('/summary', async (req, res) => {
     .map((n) => `- [${n.sentiment}] ${n.headline}`)
     .join('\n');
 
-  const prompt = `You are a professional stock analyst. Analyse the following data for ${ticker} and write a clear, concise investment intelligence summary (3-4 sentences max).
+  const prompt = `You are a friendly but professional stock analyst. Analyse the following data for ${ticker} and write a clear, conversational investment summary in 4-5 sentences.
 
 STOCK DATA:
 - Current Price: ${stockData.price} ${stockData.currency}
@@ -34,13 +34,18 @@ STOCK DATA:
 RECENT NEWS SENTIMENT:
 ${newsHeadlines}
 
-Write a summary covering:
-1. Current momentum and key technical signals
-2. What the news sentiment suggests about near-term direction
+Write a natural, clean summary covering:
+1. Current momentum and price action
+2. What the news suggests about near term direction
 3. Key risk to watch
-4. One actionable takeaway for an investor
+4. One actionable takeaway
 
-Be specific to this ticker. Do NOT give generic disclaimers. Be direct and professional.`;
+Rules:
+- NO markdown formatting at all
+- NO asterisks, hashes, dashes or special characters
+- NO bold or italic text
+- Write in plain conversational English like a human analyst talking to a friend
+- Be direct and specific to this ticker`;
 
   try {
     const response = await axios.post(
