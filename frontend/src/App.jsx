@@ -152,7 +152,7 @@ export default function App() {
           </button>
         ))}
         <span style={{ fontSize: '12px', color: '#aaa', alignSelf: 'center' }}>
-          Note: Indian stocks use .NS suffix (e.g. TCS.NS)
+          US Markets · Indian stocks coming soon
         </span>
       </div>
 
