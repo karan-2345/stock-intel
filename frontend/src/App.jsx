@@ -8,8 +8,7 @@ import FearGauge from './components/FearGauge';
 import GeopoliticalPanel from './components/GeopoliticalPanel';
 
 // Quick-access tickers for Indian + US markets
-const QUICK_TICKERS = ['RELIANCE.NS', 'TCS.NS', 'INFY.NS', 'AAPL', 'NVDA', 'TSLA'];
-
+const QUICK_TICKERS = ['RELIANCE.BO', 'TCS.BO', 'INFY.BO', 'AAPL', 'NVDA', 'TSLA'];
 // Helper: format large numbers (marketcap etc.)
 function formatNumber(n) {
   if (!n) return 'N/A';
