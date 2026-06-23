@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE = '/api';
+const BASE = 'https://stock-intel-6wrm.onrender.com/api';
 
 // Fetch stock price, metrics, chart data
 export async function fetchStock(ticker) {
